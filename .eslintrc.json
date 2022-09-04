@@ -35,5 +35,10 @@
         "aspects": ["invalidHref", "preferButton"]
       }
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
