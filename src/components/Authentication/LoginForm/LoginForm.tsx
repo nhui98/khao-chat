@@ -13,7 +13,7 @@ const LoginForm = () => (
       <button className="bg-[#7b96ec] text-white p-2 font-bold">Sign in</button>
     </form>
     <p className="text-[#5d5b8d] text-base mt-2">
-      Don&apos;t have an account? Register here.
+      Don&apos;t have an account? Register here
     </p>
   </FormLayout>
 );
