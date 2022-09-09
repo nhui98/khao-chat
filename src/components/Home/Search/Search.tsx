@@ -29,10 +29,6 @@ const Search = () => {
       querySnapshot.forEach((doc) => {
         setUser(doc.data());
       });
-
-      if (!user) setErr(true);
-
-      setErr(false);
     } catch (error) {
       setErr(true);
     }
@@ -54,7 +50,6 @@ const Search = () => {
       const res = await getDoc(doc(db, "chats", combinedId));
 
       if (!res.exists()) {
-        //create chat in chats collection
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
 
         //create user chats
@@ -108,7 +103,7 @@ const Search = () => {
             className="w-[50px] rounded-full border-none bg-transparent object-cover py-2 text-white outline-none placeholder:text-gray-400"
           />
           <div>
-            <span className="text-sm font-medium">{user.name}</span>
+            <span className="text-sm font-medium">{user.displayName}</span>
           </div>
         </button>
       )}

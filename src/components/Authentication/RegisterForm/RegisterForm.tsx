@@ -55,7 +55,7 @@ const RegisterForm = () => {
 
                     await setDoc(doc(db, "users", res.user.uid), {
                       uid: res.user.uid,
-                      name,
+                      displayName: name,
                       email,
                       photoURL: downloadURL,
                     });
