@@ -5,14 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Field, Form, Formik } from "formik";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase/firebase";
-import { useAuth } from "../../../context/AuthContext";
 
 const LoginForm = () => {
-  const currentUser = useAuth();
   const [err, setError] = useState(false);
   const navigate = useNavigate();
-
-  if (!currentUser) navigate("/");
 
   return (
     <FormLayout title="Login">

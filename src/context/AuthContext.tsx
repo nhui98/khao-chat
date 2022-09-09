@@ -38,5 +38,5 @@ export const useAuth = () => {
   if (context === undefined)
     throw new Error("auth state must be used within AuthContext");
 
-  return context.currentUser;
+  return context;
 };
