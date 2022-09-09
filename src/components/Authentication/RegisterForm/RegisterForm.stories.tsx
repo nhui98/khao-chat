@@ -5,7 +5,7 @@ export default {
   title: "authentication/registerform",
   component: RegisterForm,
   argTypes: {},
-  decorators: [(story) => story()],
+  decorators: [],
 } as ComponentMeta<typeof RegisterForm>;
 
 const Template: ComponentStory<typeof RegisterForm> = () => <RegisterForm />;
