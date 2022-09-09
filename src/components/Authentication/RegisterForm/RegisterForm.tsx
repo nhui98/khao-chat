@@ -34,6 +34,7 @@ const RegisterForm = () => {
             );
 
             const storageRef = ref(storage, name);
+            // @ts-ignore
             const uploadTask = uploadBytesResumable(storageRef, file);
 
             uploadTask.on(
